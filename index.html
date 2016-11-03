@@ -1,0 +1,126 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/white.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section data-background-color="#F0FFFF	" data-background-image="https://worldvectorlogo.com/logos/vagrant.svg" data-background-size="300px" data-background-position="top">
+					<h2>Welcome to Vagrant</h2>
+				</section>
+				<section data-background-color="#F0FFFF	">
+					<h2>What is Vagrant?</h2>
+					<blockquote>Vagrant is a tool to Create and configure lightweight, reproducible, and portable development environments.</blockquote>
+				</section>
+				<section data-background-color="#F0FFFF	">
+					<h2>Why Vagrant?</h2>
+					<ul>
+						<li>No more "runs on my machine"</li>
+						<li>Same enviroment as in production</li>
+						<li>Portable and runs on every OS</li>
+						<li>Easy to set up, also for non tech people</li>
+						<li>Runs on Virtualbox, AWS, Docker...</li>
+					</ul>
+				</section>
+				<section data-background-color="#F0FFFF	">
+					<h2>Getting started</h2>
+					<ol>
+						<li>Install Vagrant</li>
+						<li>Install Virtualbox</li>
+						<li>Install NFS plugin for Windows</li>
+						<pre>
+							<code data-trim data-noescape>
+								$ vagrant plugin install vagrant-winnfsd
+   						    </code>
+   						</pre>
+					</ol>
+				</section>
+				<section data-background-color="#F0FFFF	">
+					<h2>Getting Started</h2>
+					<pre>
+					  	<code data-trim data-noescape>
+					  		$ mkdir vagrant_getting_started
+   						</code>
+   						<code data-trim data-noescape>
+					  		$ cd vagrant_getting_started
+   						</code>
+   						<code data-trim data-noescape>
+					  		$ vagrant init
+   						</code>
+   					</pre>
+				</section>
+				<section data-background-color="#F0FFFF	">
+					<h2>The Vagrant file</h2>
+						<ul>
+							<li>used for the configuration of the VM</li>
+						</ul>
+				</section>
+				<section data-background-color="#F0FFFF	">
+					<h2>Vagrant Boxes</h2>
+						<ul>
+							<li>Boxes are the package format for Vagrant environments</li>
+							<li>Boxes with any OS can be found under https://atlas.hashicorp.com/boxes/search</li>
+						</ul>
+				</section>
+				<section data-background-color="#F0FFFF	">
+					<h2>Provisioning shell script</h2>
+						<ul>
+							<li>used to install and configure software running on the VM</li>
+							<li>set up databases and import dumps</li>
+						</ul>
+				</section>
+				<section data-background-color="#F0FFFF	">
+					<h2>Provisioning Alternatives</h2>
+						<ul>
+							<li>Puppet</li>
+							<li>Chef</li>
+							<li>Ansible</li>
+						</ul>
+				</section>
+				<section data-background-color="#F0FFFF	">
+					<h2>Wordpress Demo</h2>
+						<ul>
+							<li>git clone git@github.com:denis-huber/vagrant-demo.git</li>
+						</ul>
+				</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				history: true,
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
